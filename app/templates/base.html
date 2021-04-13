@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ pagetitle }}</title>
+	<link rel = "stylesheet" href = "{{ url_for('static', filename='css/main.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.png') }}">
+</head>
+<body>
+{% include "includes/header.html"%}
+{% block content %}
+{% endblock %}
+{% include "includes/footer.html"%}
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
