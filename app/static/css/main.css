@@ -1,0 +1,28 @@
+* {
+    text-align: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.header {
+  overflow: hidden;
+  background-color: dodgerblue;
+  padding: 0px 10px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #323133;
+  color: white;
+  text-align: center;
+}
