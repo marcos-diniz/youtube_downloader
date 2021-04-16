@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section id="response-page">
-	<h2>Json Response</h2>
-	<span id='status'></span>
-	<span id='status-message'></span>
-	<span id="url"></span>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modal-message"></p>
+  </div>
+</div>
+<section class="center">
+<section id="video-container" class=""></section>
+<section id="download-page" class="hide">
+	<select id="format-select" class="format-select"></select>
+    <a id="download-link" class="default-button" onclick="downloadFile()" >Loading...</a>
 </section>
-
-<section id="search-page">
-<h1>ytdownloader</h1> 
-<input id="url-input" placeholder = "Youtube URL to Download"> 
-<button id="send-url-button">Send</button>
+</section>
+<section><h1 id="title" class='title'>ytdownloader</h1></section>
+<section id="search-page" class="center width-100"> 
+<input id="url-input" class="url-input" placeholder = "Youtube URL to Download"> 
+<button id="send-url-button" class="default-button" >Send</button>
 </section>
 {% endblock %}
