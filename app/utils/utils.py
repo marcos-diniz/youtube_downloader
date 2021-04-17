@@ -4,21 +4,22 @@ import json
 import hashlib
 import os
 
-def read_json_file(filename, path='app/streams/'):
-    with open(f'{path}{filename}.json', 'r') as file:
+def read_json_file(filepath):
+    with open(filepath, 'r') as file:
         data = json.load(file)
         file.close()
         return data
 
-def create_json_file(filename, data={}, path='app/streams/'):
-    with open(f'{path}{filename}.json', 'w') as file:
+def create_json_file(filepath, data={}):
+    with open(filepath, 'w') as file:
         json.dump(data, file)
         file.close()
         return 0
 
-def create_dict_stream_files(list_streams):
+def create_dict_stream_files(streams_path, list_streams):
     for dict_stream in list_streams:
-        create_json_file(dict_stream['id'], dict_stream)
+        filepath = os.path.join(streams_path, dict_stream['id'])
+        create_json_file(filepath+'.json', dict_stream)
     return 0
 
 def is_youtube_url(url):
