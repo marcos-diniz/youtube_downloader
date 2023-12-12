@@ -1,5 +1,5 @@
 # youtube_downloader
-sample flask youtube-downloader web application
+simple flask youtube-downloader web application
 
 
 #### Dependencies
